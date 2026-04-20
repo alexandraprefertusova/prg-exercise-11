@@ -2,8 +2,13 @@ import random
 import matplotlib.pyplot as plt
 
 
-def random_numbers(count):
-    return [random.randint(0, 100) for _ in range(count)]
+def random_numbers(n, min_val, max_val):
+    numbers = []
+
+    for _ in range(n):
+        numbers.append(random.randint(min_val, max_val))
+
+    return numbers
 
 
 def selection_sort(numbers, visualize=False):
